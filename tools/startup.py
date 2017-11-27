@@ -12,6 +12,7 @@ elif Path(constants.DATA_SET_ARCHIVE_FILE_NAME).is_file():
     print("Extracting the archive...")
     tarfile = tarfile.open(constants.DATA_SET_ARCHIVE_FILE_NAME, "r:gz")
     tarfile.extractall(".")
+    print("The data set archive has been extracted.")
 else:
     print("The data set archive is not downloaded!")
     print("Please, get it manually from https://www.instacart.com/datasets/grocery-shopping-2017.")

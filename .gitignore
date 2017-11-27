@@ -102,3 +102,7 @@ ENV/
 
 # PyCharm
 .idea/
+
+# Dataset
+*.tar.gz
+instacart_2017_05_01/*

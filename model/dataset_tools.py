@@ -1,7 +1,11 @@
+import os
 import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
 import resources.constants as constants
 
 product_columns = ["order_id", "product_id"]
+os.chdir("..")
 
 
 def get_train_data(nrows=None):
@@ -21,3 +25,9 @@ def get_test_data(nrows=None):
 def get_orders_df():
     orders_file_path = constants.DATA_SET_DIRECTORY_NAME + "/" + 'orders.csv'
     return pd.read_csv(orders_file_path, sep=',', usecols=["order_id", "order_hour_of_day"])
+
+
+def plot_data(x, y):
+    plt.plot(x, y, 'ro')
+    plt.yticks([*range(24)])
+    plt.show()
